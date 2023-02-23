@@ -1,0 +1,40 @@
+<!-- <p>cart works!</p> -->
+
+<!-- <ng-container *ngIf="true"> </ng-container> -->
+<!--
+<ng-container *ngIf="false">
+
+</ng-container> -->
+<div class="container">
+  <div class="card">
+    <h1>My Cart</h1>
+
+  <div class="center" *ngIf="!isFilled">
+    <img
+      src="https://rukminim1.flixcart.com/www/800/800/promos/16/05/2019/d438a32e-765a-4d8b-b4a6-520b560971e8.png?q=90"
+      alt=""
+    />
+    <h2>Your cart is empty</h2>
+    <h3>Add item to it now</h3>
+    <button routerLink="/products" class="btn search-btn">Shop Now</button>
+  </div>
+  <div  *ngIf="isFilled">
+    <mat-card class="example-card" *ngFor="let item of product" >
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>{{item.name}}</mat-card-title>
+          <mat-card-subtitle>{{item.category}}   ID:{{item.prodId}}</mat-card-subtitle>
+          <img mat-card-sm-image src={{item.image}} >
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Rs. {{item.price}}</p>
+        <button mat-flat-button class="clear-btn" (click)="deleteItem(item.cartId)">Delete</button>
+      </mat-card-content>
+    </mat-card>
+    <h2>Total Price: Rs. {{totalPrice}}</h2>
+    <button [routerLink]="'/payment'" mat-flat-button class="search-btn">Check Out</button>
+  </div>
+
+</div>
+</div>

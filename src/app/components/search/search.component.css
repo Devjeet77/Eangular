@@ -1,0 +1,32 @@
+.container{
+  margin-top: 20px;
+}
+
+.example-card {
+  max-width: 250px;
+  float: left;
+  margin: 20px;
+  height: 610px;
+  border-radius: 10px;
+}
+.mat-product{
+  background-color: rgb(255, 174, 0);
+  color: black;
+  border-radius: 10px 10px 0px 0px;
+  padding-bottom: 10px;
+}
+.content-product{
+  padding-top: 10px;
+}
+.example-img{
+  max-height: 350px;
+}
+
+.search-btn{
+  background-color:  rgb(255, 174, 0);
+  color: black;
+}
+.clear-btn{
+  background-color: black;
+  color: white;
+}

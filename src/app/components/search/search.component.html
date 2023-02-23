@@ -1,0 +1,37 @@
+<div class="text-centre container">
+<form (ngSubmit)="doSubmit()">
+  <!-- Username -->
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Search here...</mat-label>
+    <input
+
+      name="search"
+      [(ngModel)]="search"
+      matInput
+      placeholder="Enter here"
+    />
+    <mat-icon matSuffix>search</mat-icon>
+
+  </mat-form-field><br/>
+  <button type="submit" mat-raised-button class="search-btn">Search</button>
+  </form>
+</div>
+<mat-card class="example-card" *ngFor="let item of products">
+  <mat-card-header class="mat-product">
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>{{item.name}}</mat-card-title>
+    <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="example-img" src={{item.image}} alt="Photo of a Shiba Inu">
+  <mat-card-content class="content-product">
+    <p>
+      {{item.details}}
+    </p>
+    <h2>Rs. {{item.price}}</h2>
+    <p>Rating: {{item.rating}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="search-btn" btn-primary (click)="addToCart(item)">ADD TO CART</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button class="clear-btn" color="warn">SHARE</button>
+  </mat-card-actions>
+</mat-card>

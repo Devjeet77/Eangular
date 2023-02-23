@@ -1,0 +1,65 @@
+<!-- <p>singup works!</p> -->
+
+<div class="bootstrap-wrapper">
+  <div class="container">
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-6 offset-md-4">
+        <mat-card class="example-card">
+          <div class="text-centre">
+            <img src="../../../assets/download.jpg" alt="" />
+          </div>
+          <h1 class="text-centre">Login here</h1>
+          <form (ngSubmit)="doSubmit()">
+            <!-- Username -->
+            <!-- <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Username</mat-label>
+              <input name="name"
+              [(ngModel)]="data.name" matInput placeholder="Enter here" />
+              <mat-icon matSuffix>account_circle</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field> -->
+
+            <!-- password -->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>password</mat-label>
+              <input
+                name="password"
+                [(ngModel)]="data.password"
+                type="password"
+                matInput
+                placeholder="Enter here"
+              />
+              <mat-icon matSuffix>key</mat-icon>
+              <mat-hint>Hint</mat-hint>
+            </mat-form-field>
+
+            <!-- Email -->
+            <mat-form-field class="full-width" appearance="outline">
+              <mat-label>Email</mat-label>
+              <input
+                name="email"
+                [(ngModel)]="data.email"
+                type="email"
+                matInput
+                placeholder="Enter here"
+              />
+              <mat-icon matSuffix>contact_mail</mat-icon>
+              <!-- <mat-hint>Hint</mat-hint> -->
+            </mat-form-field>
+
+            <div class="container text-centre">
+              <button mat-raised-button class="login-btn">Login</button>
+              <button
+                style="margin-left: 20px"
+                mat-raised-button
+                class="clear-btn"
+              >
+                Clear
+              </button>
+            </div>
+          </form>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>

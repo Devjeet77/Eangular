@@ -1,0 +1,63 @@
+<!-- <h1>this is navbar</h1> -->
+<mat-toolbar class="nav-color">
+  <button
+    [routerLink]="'/'"
+    mat-icon-button class="cart-btn"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>home_app_logo</mat-icon>
+</button>
+  <span>Ecommerce</span>
+  <div class="containerss">
+    <button
+      [routerLink]="'/products'"
+      mat-flat-button
+    >
+      Products
+      <!-- <mat-icon>login</mat-icon> -->
+  </button>
+
+
+  </div>
+  <span class="example-spacer"></span>
+  <button
+  [routerLink]="'/search'"
+  mat-icon-button class="cart-btn"
+>
+<mat-icon>search</mat-icon>
+  <!-- <mat-icon>login</mat-icon> -->
+</button>
+
+
+
+  <div class="example-button-container">
+  <button mat-icon-button class="cart-btn"  aria-label="Example icon button with a home icon" routerLink="/cart" *ngIf="isLoggedIn">
+    <mat-icon> local_grocery_store</mat-icon>
+  </button></div>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/login" *ngIf="!isLoggedIn">
+      <mat-icon>person</mat-icon>
+      <span>Login</span>
+    </button>
+    <button mat-menu-item routerLink="/signup">
+      <mat-icon>person_add</mat-icon>
+      <span>Register</span>
+    </button>
+    <button mat-menu-item (click)="logout()" *ngIf="isLoggedIn">
+      <mat-icon>cancel</mat-icon>
+      <span>Logout</span>
+    </button>
+  </mat-menu>
+
+  <!-- <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with share icon"
+  >
+    Singup
+    <mat-icon>share</mat-icon>
+  </button> -->
+</mat-toolbar>

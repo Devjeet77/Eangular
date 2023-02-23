@@ -1,0 +1,76 @@
+
+<div class="card-top container-fluid">
+  <div class="container d-flex">
+    <div class="item">
+      <a (click)="all()">
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/f15c02bfeb02d15d.png?q=100"
+          alt=""
+        />
+        <h6>All Products</h6>
+      </a>
+    </div>
+
+    <div class="item">
+      <a (click)="electronics()">
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/69c6589653afdb9a.png?q=100"
+          alt=""
+        />
+        <h6>Electronics</h6>
+      </a>
+    </div>
+
+    <div class="item">
+      <a (click)="fashion()">
+        <img
+          src="https://rukminim1.flixcart.com/flap/128/128/image/82b3ca5fb2301045.png?q=100"
+          alt=""
+        />
+        <h6>Fashion</h6>
+      </a>
+    </div>
+
+    <div class="item">
+      <a (click)="mobiles()">
+        <img
+
+          src="https://rukminim1.flixcart.com/flap/128/128/image/22fddf3c7da4c4f4.png?q=100"
+          alt=""
+        />
+        <h6>Mobiles</h6>
+      </a>
+    </div>
+
+    <div class="item">
+      <a (click)="home()">
+        <img
+
+          src="https://rukminim1.flixcart.com/flap/128/128/image/ab7e2b022a4587dd.jpg?q=100"
+          alt=""
+        />
+        <h6>Home</h6>
+      </a>
+    </div>
+  </div>
+</div>
+
+<mat-card class="example-card" *ngFor="let item of products">
+  <mat-card-header class="mat-product">
+    <!-- <div mat-card-avatar class="example-header-image"></div> -->
+    <mat-card-title>{{item.name}}</mat-card-title>
+    <mat-card-subtitle>{{item.category}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image class="example-img" src={{item.image}} alt="Photo of a Shiba Inu">
+  <mat-card-content class="content-product">
+    <p>
+      {{item.details}}
+    </p>
+    <h2>Rs. {{item.price}}</h2>
+    <p>Rating: {{item.rating}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button class="search-btn" btn-primary (click)="addToCart(item)">ADD TO CART</button>&nbsp;&nbsp;&nbsp;
+    <button mat-raised-button class="clear-btn">SHARE</button>
+  </mat-card-actions>
+</mat-card>

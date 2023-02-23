@@ -1,0 +1,23 @@
+.full-width {
+  width: 100%;
+}
+.example-card {
+  max-width: 800px;
+  padding: 40px 40px 40px 40px;
+  border-color: black;
+  border-radius: 20px;
+  border: 5px solid black;
+  margin-top: 20px;
+}
+.login-btn{
+  background-color:  rgb(255, 174, 0);
+  color: black;
+}
+.clear-btn{
+  background-color: black;
+  color: white;
+}
+.containe img{
+  width: 200px;
+  margin-bottom: 40px;
+}

@@ -1,0 +1,10 @@
+
+.card {
+  height: auto;
+  margin: 40px;
+  padding: 25px;
+}
+.search-btn{
+  background-color:  rgb(255, 174, 0);
+  color: black;
+}
